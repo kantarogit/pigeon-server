@@ -1,0 +1,31 @@
+{
+  "name": "pigeon-server",
+  "version": "1.1.0",
+  "description": "Pigeon server for handling WebSocket connections and broadcasting messages",
+  "main": "index.js",
+  "scripts": {
+    "publish-package": "npx tsc && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node-dev --env-file .env --respawn index.ts"
+  },
+  "bin": {
+    "pigeon-server": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "author": "Filip Kantardjioski",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/socket.io": "^3.0.2",
+    "@types/uuid": "^10.0.0",
+    "prettier": "^3.5.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  }
+}
