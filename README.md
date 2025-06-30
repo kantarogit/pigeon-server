@@ -21,7 +21,7 @@ export PIGEON_SERVER_PORT=4000
 
 ## How it works
 
-- Each Playwright project using pigeon-reporter sends test events to the server and each messages including a `projectId`.
+- Each Playwright project using pigeon-reporter sends test events to the server and each messages contains a `projectId`.
 - The server broadcasts these events to all clients subscribed to that project's room.
 - Clients (such as dashboards or databases) connect and subscribe to a project room to receive live updates (see more about [socket.io rooms](https://socket.io/docs/v3/rooms/))
 
