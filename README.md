@@ -95,7 +95,20 @@ Examples:
 }
 ```
 
-but when `eventType` is `TEST_COMPLETED` the message looks like:
+- when `eventType` is `TEST_STARTED` the message looks like:
+
+```
+{
+  projectId: 'demo_navigation',
+  test: 'url should match when navigating to facebook',
+  eventType: 'test started',
+  location: 'pigeon-test\\tests\\shouldMatchUrl.spec.ts',
+  target: 'firefox',
+  testId: '59838c6127c87d7e02ce-08cc364005662e621d47'
+}
+```
+
+- when `eventType` is `TEST_COMPLETED` the message looks like:
 
 ```
 {
@@ -123,7 +136,17 @@ but when `eventType` is `TEST_COMPLETED` the message looks like:
 }
 ```
 
-The server prints out the each message all the time so when you are building something on top of it, you can always check the message strucure in console.
+- when `eventType` is `TEST_RUN_COMPLETED` the message looks like:
+
+```
+{
+  projectId: 'demo_navigation',
+  eventType: 'test run completed',
+  percentage: 100
+}
+```
+
+Note that pigeon-server prints out each message all the time so when you are building something on top of it, you can always check the message strucure in console.
 
 ## Author
 
